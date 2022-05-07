@@ -4,8 +4,8 @@
 
 use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
 
-Breadcrumbs::for('home', function ($trail) {
-    $trail->push('Home', route('home'));
+Breadcrumbs::for('dashboard_index', function ($trail) {
+    $trail->push('Dashboard', route('dashboard.index'));
 });
 
 // Home > About
