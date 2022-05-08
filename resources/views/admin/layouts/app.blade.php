@@ -25,6 +25,7 @@
     <link href="{{ asset('admin/assets/css/flag-icon.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/style.css') }}" rel="stylesheet" type="text/css">
     <!-- End css -->
+    @stack('css-external')
 </head>
 
 <body class="vertical-layout">
@@ -96,14 +97,16 @@
             @include('admin.layouts.header')
             <!-- End Topbar -->
             <!-- Start Breadcrumbbar -->
+
+
             <div class="breadcrumbbar">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-8">
-                        <h4 class="page-title">@yield('title')</h4>
+                        <h4 class="page-title">Page | @yield('title')</h4>
+
                         <div class="breadcrumb-list">
                             <ol class="breadcrumb">
                                 @yield('breadcrubms')
-
                             </ol>
                         </div>
                     </div>
@@ -149,10 +152,14 @@
     <!-- Slick js -->
     <script src="{{ asset('admin/assets/plugins/slick/slick.min.js') }}"></script>
     <!-- Custom Dashboard js -->
+    <script src="{{ asset('admin/assets/plugins/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('admin/assets/js/custom/custom-dashboard.js') }}"></script>
     <!-- Core js -->
     <script src="{{ asset('admin/assets/js/core.js') }}"></script>
     <!-- End js -->
+
+    @stack('js-external')
+    @stack('js-internal')
 </body>
 
 </html>

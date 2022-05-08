@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -32,4 +33,8 @@ Route::group(['prefix' => 'home'], function () {
 
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+    // Posts
+    // Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
+    Route::resource('/posts', PostsController::class);
 });
