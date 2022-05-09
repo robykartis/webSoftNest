@@ -10,8 +10,7 @@ Breadcrumbs::for('dashboard_index', function ($trail) {
 
 // Dashboard > Posts
 Breadcrumbs::for('posts_index', function ($trail) {
-    $trail->parent('dashboard_index');
-    $trail->push('Posts', route('posts.index'));
+    $trail->push('Postingan', route('posts.index'));
 });
 // Dasboard > Post > Create
 Breadcrumbs::for('posts_create', function ($trail) {
