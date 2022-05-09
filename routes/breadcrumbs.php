@@ -14,8 +14,8 @@ Breadcrumbs::for('posts_index', function ($trail) {
 });
 // Dasboard > Post > Create
 Breadcrumbs::for('posts_create', function ($trail) {
-    $trail->parent('dashboard_index');
-    $trail->push('Tambah', route('posts.create'));
+    $trail->parent('posts_index');
+    $trail->push('Tambah Postingan', route('posts.create'));
 });
 
 // // Home > Blog

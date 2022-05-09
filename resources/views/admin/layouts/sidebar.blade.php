@@ -37,7 +37,7 @@
 
                 </li>
 
-                <li class="nav-item {{ set_open(['posts.index']) }}">
+                <li class="nav-item {{ set_open(['posts.index', 'posts.create']) }}">
                     <a href="{{ route('posts.index') }}" class="nav-link {{ set_active(['posts.index']) }}">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
@@ -53,7 +53,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
+                            <a href="{{ route('posts.create') }}"
+                                class="nav-link {{ set_active(['posts.create']) }}">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Data</p>
                             </a>
@@ -76,6 +77,7 @@
                     </form>
 
                 </li>
+
 
             </ul>
         </nav>
