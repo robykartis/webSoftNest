@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    Tambah Postingan
+    ADD Postingan
 @endsection
 @section('breadcrubms')
     {{ Breadcrumbs::render('posts_create') }}
